@@ -1,4 +1,4 @@
-Sources et fichiers pour le magazine Hackable #14
+Sources et fichiers pour le magazine Hackable #15
 =================================================
 
 Ce dépôt contient les croquis et sources présents dans le 15ème numéro de [Hackable](http://www.hackable.fr/) :
