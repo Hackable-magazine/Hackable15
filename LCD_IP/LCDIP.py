@@ -69,3 +69,6 @@ if __name__ == '__main__':
     lcd = HD44780()
     lcd.clear()
     lcd.message("Mon IP:\n%s" %  netifaces.ifaddresses('eth0')[netifaces.AF_INET][0]['addr'])
+
+    # Pour affichage IP + adresse MAC, utilisez :
+    # lcd.message("%s\n%s" % (netifaces.ifaddresses('eth0')[netifaces.AF_LINK][0]['addr'], netifaces.ifaddresses('eth0')[netifaces.AF_INET][0]['addr'])
