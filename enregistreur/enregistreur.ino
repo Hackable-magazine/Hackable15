@@ -112,7 +112,7 @@ void printcompteur() {
 
 // Effacement de l'EEROM
 void reinit() {
-  int compteur;
+  int compteur = 0;
   eep.read(0, (byte *) &compteur, sizeof(compteur));
   Serial.print(F("Valeur actuelle du compteur: "));
   Serial.println(compteur);
