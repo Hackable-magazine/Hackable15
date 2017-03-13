@@ -112,13 +112,14 @@ void printcompteur() {
 
 // Effacement de l'EEROM
 void reinit() {
-  int compteur = 0;
+  int compteur;
   eep.read(0, (byte *) &compteur, sizeof(compteur));
   Serial.print(F("Valeur actuelle du compteur: "));
   Serial.println(compteur);
 
   // Uniquement si broche 2 à la masse : cavalier en place
   if(!digitalRead(2)) {
+    compteur=0;
     Serial.println(F("Effacement compteur"));
     eep.write(0, (byte *) &compteur, sizeof(compteur));
     eep.read(0, (byte *) &compteur, sizeof(compteur));
